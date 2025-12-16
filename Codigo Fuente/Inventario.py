@@ -1,4 +1,4 @@
-import platform
+
 import psutil
 import wmi
 import qrcode
@@ -33,6 +33,7 @@ data_txt=data_txt.replace("{","")
 data_txt=data_txt.replace("}","")
 img = qrcode.make(data_txt)
 img.save("QR.png")
-f = open("Informacion_Sistema.txt", "w")
+
+f = open(system_info.DNSHostName + ".txt", "w")
 f.write(data_txt)
 f.close()
